@@ -268,6 +268,7 @@ function checkCashRegister(price, cash, cid) {
   // if the currency type is in there, then we will take money out of that section until we no longer can while( currency >= baseAmount)
   //
   //? MAYBE MOVE TENS CHECKER VARS HERE SO THE CALL STACK READS IT FIRST
+  // * these have an issue too btw
   function hundredsChecker() {
     console.log(roundedChangeEnd + " this is what we are starting with"); //  changing this to always be true for sake of testing, likely removing this and placing these functions into the includes test above
     if (true) {
@@ -479,7 +480,7 @@ function checkCashRegister(price, cash, cid) {
   }
 
   //
-
+//* these also have an issue since the checkers are inside them
   function checkCurrency100() {
     function hundredsChecker() {
       console.log(roundedChangeEnd + " this is what we are starting with"); //  changing this to always be true for sake of testing, likely removing this and placing these functions into the includes test above
