@@ -1798,3 +1798,6 @@ checkCashRegister(3.26, 100, [
 ]);
 
 // //////////////////////////// //////////////////////////// //////////////////////////// //////////////////////////
+// ? I dont understand why the FCC wont even acknowledge finalAnswer as the correct answer,
+// ? let alone why it is not even considered an obj at all! 
+// ? especially bc the chrome dev tools console returns the obj, but the FCC wont????
