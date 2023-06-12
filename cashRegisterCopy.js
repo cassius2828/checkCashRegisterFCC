@@ -1813,3 +1813,13 @@ checkCashRegister(3.26, 100, [
   ["TWENTY", 60],
   ["ONE HUNDRED", 100],
 ]);
+
+// ? I dont understand why the FCC wont even acknowledge finalAnswer as the correct answer,
+// ? let alone why it is not even considered an obj at all! 
+// ? especially bc the chrome dev tools console returns the obj, but the FCC wont????
+
+// ! There is somehting in the code that prevents the finalAnswer from being properly logged
+// ! look for red comment code near the top, this returns an obj
+// ! However, the same exact code at the bottom does not/ is never read??
+// ! find out what was done in the middle to make this effect occur
+// ! go section by section, testing the obj test to see where the issue is
