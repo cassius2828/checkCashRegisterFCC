@@ -1683,6 +1683,12 @@ function checkCashRegister(price, cash, cid) {
   const cidNickels = cidNickelsCheck();
   const cidPennies = cidPenniesCheck();
 
+  // ! DOES works here!!!!!!!!!!!
+  //  this is code that passes the obj test
+  //* finalAnswer = { name: "objectBro" };
+  //* return finalAnswer;
+  // ! ///////////////////////////////
+
   const cidCheck100 = hundredsChecker();
   const cidCheck20 = twentiesChecker();
   const cidCheck10 = tensChecker();
@@ -1693,6 +1699,11 @@ function checkCashRegister(price, cash, cid) {
   const cidCheckC5 = nickelsChecker();
   const cidCheckC1 = penniesChecker();
 
+  // ! does NOT works here!!!!!!!!!!!
+  //  this is code that passes the obj test
+  //* finalAnswer = { name: "objectBro" };
+  //* return finalAnswer;
+  // ! ///////////////////////////////
   debugger;
   // statusArrBuilder, will use later to create change response in open status
   const statusArrBuilder = () => {
