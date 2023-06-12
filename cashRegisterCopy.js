@@ -2,7 +2,6 @@
 //! COPY NUM 3
 // 6/11/23 9:21PM
 function checkCashRegister(price, cash, cid) {
-  debugger;
   //   global vars
   let hundredsUsed = 0;
   let twentiesUsed = 0;
@@ -1691,6 +1690,7 @@ function checkCashRegister(price, cash, cid) {
   const cidCheckC5 = nickelsChecker();
   const cidCheckC1 = penniesChecker();
 
+  debugger;
   // statusArrBuilder, will use later to create change response in open status
   const statusArrBuilder = () => {
     if (hundredsUsed > 0) {
@@ -1754,7 +1754,7 @@ function checkCashRegister(price, cash, cid) {
   // if the code is left with more than a penny, then we will not get exact change and it will be insufficient funds
   if (roundedChange > 0.01) {
     //* const insufficientStatus = new Status("INSUFFICIENT_FUNDS", []);
-    const insufficientStatus = {status: "INSUFFICIENT_FUNDS", change: []};
+    const insufficientStatus = { status: "INSUFFICIENT_FUNDS", change: [] };
     finalAnswer = insufficientStatus;
     // return insufficientStatus;
   }
@@ -1766,14 +1766,14 @@ function checkCashRegister(price, cash, cid) {
   // added a buffer of half a penny for exact change since rounding has been an issue throughout
   if (change < total + 0.005 && change > total - 0.005) {
     //* const closedStatus = new Status("CLOSED", compareArr2);
-    const closedStatus = {status: "CLOSED", change: compareArr2};
+    const closedStatus = { status: "CLOSED", change: compareArr2 };
     finalAnswer = closedStatus;
     // return closedStatus;
   }
   // hardest part, need to make array show ONLY the values that were used in the compareArr to calculate the change from cid
   else {
     //* const openStatus = new Status("OPEN", statusArrBuilder());
-    const openStatus = {status: "OPEN", change: statusArrBuilder()};
+    const openStatus = { status: "OPEN", change: statusArrBuilder() };
     finalAnswer = openStatus;
     // return openStatus;
   }
