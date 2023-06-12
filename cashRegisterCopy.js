@@ -1,7 +1,7 @@
 //! COPY NUM 3
 // 6/12/23 4:15PM
 function checkCashRegister(price, cash, cid) {
-  //   global vars
+  //   global vars 1
   let hundredsUsed = 0;
   let twentiesUsed = 0;
   let tensUsed = 0;
@@ -11,7 +11,7 @@ function checkCashRegister(price, cash, cid) {
   let dimesUsed = 0;
   let nickelsUsed = 0;
   let penniesUsed = 0;
-
+  // global vars 2
   let finalAnswer;
   let roundedChangeEnd;
   let finalArr = [];
