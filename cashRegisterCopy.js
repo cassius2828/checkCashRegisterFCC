@@ -1753,7 +1753,8 @@ function checkCashRegister(price, cash, cid) {
   // setting conditions for register status
   // if the code is left with more than a penny, then we will not get exact change and it will be insufficient funds
   if (roundedChange > 0.01) {
-    const insufficientStatus = new Status("INSUFFICIENT_FUNDS", []);
+    //* const insufficientStatus = new Status("INSUFFICIENT_FUNDS", []);
+    const insufficientStatus = {status: "INSUFFICIENT_FUNDS", change: []};
     finalAnswer = insufficientStatus;
     // return insufficientStatus;
   }
@@ -1764,13 +1765,15 @@ function checkCashRegister(price, cash, cid) {
   }
   // added a buffer of half a penny for exact change since rounding has been an issue throughout
   if (change < total + 0.005 && change > total - 0.005) {
-    const closedStatus = new Status("CLOSED", compareArr2);
+    //* const closedStatus = new Status("CLOSED", compareArr2);
+    const closedStatus = {status: "CLOSED", change: compareArr2};
     finalAnswer = closedStatus;
     // return closedStatus;
   }
   // hardest part, need to make array show ONLY the values that were used in the compareArr to calculate the change from cid
   else {
-    const openStatus = new Status("OPEN", statusArrBuilder());
+    //* const openStatus = new Status("OPEN", statusArrBuilder());
+    const openStatus = {status: "OPEN", change: statusArrBuilder()};
     finalAnswer = openStatus;
     // return openStatus;
   }
