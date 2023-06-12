@@ -1,9 +1,7 @@
-
 // ////////////////////////////////////////////// ////////////////////////////////////////////// ////////////////////////////////////////////
 //! COPY NUM 3
 // 6/11/23 9:21PM
 function checkCashRegister(price, cash, cid) {
-  debugger;
   //   global vars
   let hundredsUsed = 0;
   let twentiesUsed = 0;
@@ -35,6 +33,9 @@ function checkCashRegister(price, cash, cid) {
     ["ONE HUNDRED", 100],
   ];
   const reversedCID = cid.reverse();
+  // ! this is code that passes the obj test
+  //* finalAnswer = {name: 'objectBro'};
+  //* return finalAnswer;
 
   // find change to be given
   let change = cash - price;
@@ -267,6 +268,7 @@ function checkCashRegister(price, cash, cid) {
   // if the currency type is in there, then we will take money out of that section until we no longer can while( currency >= baseAmount)
   //
   //? MAYBE MOVE TENS CHECKER VARS HERE SO THE CALL STACK READS IT FIRST
+  // * these have an issue too btw
   function hundredsChecker() {
     console.log(roundedChangeEnd + " this is what we are starting with"); //  changing this to always be true for sake of testing, likely removing this and placing these functions into the includes test above
     if (true) {
@@ -478,7 +480,7 @@ function checkCashRegister(price, cash, cid) {
   }
 
   //
-
+//* these also have an issue since the checkers are inside them
   function checkCurrency100() {
     function hundredsChecker() {
       console.log(roundedChangeEnd + " this is what we are starting with"); //  changing this to always be true for sake of testing, likely removing this and placing these functions into the includes test above
@@ -1682,6 +1684,12 @@ function checkCashRegister(price, cash, cid) {
   const cidNickels = cidNickelsCheck();
   const cidPennies = cidPenniesCheck();
 
+  // ! DOES works here!!!!!!!!!!!
+  //  this is code that passes the obj test
+  //* finalAnswer = { name: "objectBro" };
+  //* return finalAnswer;
+  // ! ///////////////////////////////
+
   const cidCheck100 = hundredsChecker();
   const cidCheck20 = twentiesChecker();
   const cidCheck10 = tensChecker();
@@ -1692,6 +1700,12 @@ function checkCashRegister(price, cash, cid) {
   const cidCheckC5 = nickelsChecker();
   const cidCheckC1 = penniesChecker();
 
+  // ! does NOT works here!!!!!!!!!!!
+  //  this is code that passes the obj test
+  //* finalAnswer = { name: "objectBro" };
+  //* return finalAnswer;
+  // ! ///////////////////////////////
+  debugger;
   // statusArrBuilder, will use later to create change response in open status
   const statusArrBuilder = () => {
     if (hundredsUsed > 0) {
@@ -1754,7 +1768,8 @@ function checkCashRegister(price, cash, cid) {
   // setting conditions for register status
   // if the code is left with more than a penny, then we will not get exact change and it will be insufficient funds
   if (roundedChange > 0.01) {
-    const insufficientStatus = new Status("INSUFFICIENT_FUNDS", []);
+    //* const insufficientStatus = new Status("INSUFFICIENT_FUNDS", []);
+    const insufficientStatus = { status: "INSUFFICIENT_FUNDS", change: [] };
     finalAnswer = insufficientStatus;
     // return insufficientStatus;
   }
@@ -1765,13 +1780,15 @@ function checkCashRegister(price, cash, cid) {
   }
   // added a buffer of half a penny for exact change since rounding has been an issue throughout
   if (change < total + 0.005 && change > total - 0.005) {
-    const closedStatus = new Status("CLOSED", compareArr2);
+    //* const closedStatus = new Status("CLOSED", compareArr2);
+    const closedStatus = { status: "CLOSED", change: compareArr2 };
     finalAnswer = closedStatus;
     // return closedStatus;
   }
   // hardest part, need to make array show ONLY the values that were used in the compareArr to calculate the change from cid
   else {
-    const openStatus = new Status("OPEN", statusArrBuilder());
+    //* const openStatus = new Status("OPEN", statusArrBuilder());
+    const openStatus = { status: "OPEN", change: statusArrBuilder() };
     finalAnswer = openStatus;
     // return openStatus;
   }
@@ -1780,6 +1797,9 @@ function checkCashRegister(price, cash, cid) {
   console.log(" ");
   console.log(" ");
   console.log(finalAnswer);
+  // ! this is code that passes the obj test
+  //* finalAnswer = {name: 'objectBro'};
+  //* return finalAnswer;
   return finalAnswer;
 }
 
@@ -1796,3 +1816,12 @@ checkCashRegister(3.26, 100, [
 ]);
 
 // //////////////////////////// //////////////////////////// //////////////////////////// //////////////////////////
+// ? I dont understand why the FCC wont even acknowledge finalAnswer as the correct answer,
+// ? let alone why it is not even considered an obj at all! 
+// ? especially bc the chrome dev tools console returns the obj, but the FCC wont????
+
+// ! There is somehting in the code that prevents the finalAnswer from being properly logged
+// ! look for red comment code near the top, this returns an obj
+// ! However, the same exact code at the bottom does not/ is never read??
+// ! find out what was done in the middle to make this effect occur
+// ! go section by section, testing the obj test to see where the issue is
