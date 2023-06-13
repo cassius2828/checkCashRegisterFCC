@@ -475,7 +475,7 @@ function checkCashRegister(price, cash, cid) {
       console.log(roundedChangeEnd + " this is it boys");
       console.log(finalArr);
     }
-    return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
+    (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
   }
 
   //
@@ -706,7 +706,7 @@ function checkCashRegister(price, cash, cid) {
         console.log(roundedChangeEnd + " this is it boys");
         console.log(finalArr);
       }
-      return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
+       (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
     }
     // done
   }
@@ -910,7 +910,7 @@ function checkCashRegister(price, cash, cid) {
         console.log(roundedChangeEnd + " this is it boys");
         console.log(finalArr);
       }
-      return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
+       (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
     }
     // done
   }
@@ -1087,7 +1087,7 @@ function checkCashRegister(price, cash, cid) {
         console.log(roundedChangeEnd + " this is it boys");
         console.log(finalArr);
       }
-      return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
+       (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
     }
     // done
   }
@@ -1238,7 +1238,7 @@ function checkCashRegister(price, cash, cid) {
         console.log(roundedChangeEnd + " this is it boys");
         console.log(finalArr);
       }
-      return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
+       (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
     }
     // done
   }
@@ -1364,7 +1364,7 @@ function checkCashRegister(price, cash, cid) {
         console.log(roundedChangeEnd + " this is it boys");
         console.log(finalArr);
       }
-      return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
+       (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
     }
     // done
   }
@@ -1539,7 +1539,7 @@ function checkCashRegister(price, cash, cid) {
         console.log(roundedChangeEnd + " this is it boys");
         console.log(finalArr);
       }
-      return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
+       (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
     }
     // done
   }
@@ -1590,7 +1590,7 @@ function checkCashRegister(price, cash, cid) {
         console.log(roundedChangeEnd + " this is it boys");
         console.log(finalArr);
       }
-      return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
+       (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
     }
     // done
   }
@@ -1615,7 +1615,7 @@ function checkCashRegister(price, cash, cid) {
         console.log(roundedChangeEnd + " this is it boys");
         console.log(finalArr);
       }
-      return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
+       (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
     }
     // done
   }
