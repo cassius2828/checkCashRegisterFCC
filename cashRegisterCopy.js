@@ -1,7 +1,8 @@
+// ////////////////////////////////////////////// ////////////////////////////////////////////// ////////////////////////////////////////////
 //! COPY NUM 3
-// 6/12/23 4:15PM
+// 6/11/23 9:21PM
 function checkCashRegister(price, cash, cid) {
-  //   global vars 1
+  //   global vars
   let hundredsUsed = 0;
   let twentiesUsed = 0;
   let tensUsed = 0;
@@ -11,7 +12,7 @@ function checkCashRegister(price, cash, cid) {
   let dimesUsed = 0;
   let nickelsUsed = 0;
   let penniesUsed = 0;
-  // global vars 2
+
   let finalAnswer;
   let roundedChangeEnd;
   let finalArr = [];
@@ -251,6 +252,10 @@ function checkCashRegister(price, cash, cid) {
     console.log(count + " .01");
     return count;
   }
+  // works here
+  // ! this is code that passes the obj test
+  //* finalAnswer = {name: 'objectBro'};
+  //* return finalAnswer;
 
   //* declaring said functions in vars to get most ideal change to be given: this returns the count of currency type needed(IDEALLY)
   console.log("ideal change to be given");
@@ -267,7 +272,6 @@ function checkCashRegister(price, cash, cid) {
   // if the currency type is in there, then we will take money out of that section until we no longer can while( currency >= baseAmount)
   //
   //? MAYBE MOVE TENS CHECKER VARS HERE SO THE CALL STACK READS IT FIRST
-  // * these have an issue too btw
   function hundredsChecker() {
     console.log(roundedChangeEnd + " this is what we are starting with"); //  changing this to always be true for sake of testing, likely removing this and placing these functions into the includes test above
     if (true) {
@@ -477,9 +481,12 @@ function checkCashRegister(price, cash, cid) {
     }
     return (roundedChangeEnd = Math.round(roundedChangeEnd * 100) / 100);
   }
+  // ! this is code that passes the obj test
+  // finalAnswer = {name: 'objectBro'};
+  // return finalAnswer;
 
   //
-  //* these also have an issue since the checkers are inside them
+
   function checkCurrency100() {
     function hundredsChecker() {
       console.log(roundedChangeEnd + " this is what we are starting with"); //  changing this to always be true for sake of testing, likely removing this and placing these functions into the includes test above
@@ -1620,6 +1627,9 @@ function checkCashRegister(price, cash, cid) {
     // done
   }
   //   EDITED2
+  // ! this is code that passes the obj test
+  // finalAnswer = {name: 'objectBro'};
+  // return finalAnswer;
 
   const currencyChecker100 = checkCurrency100();
   const currencyChecker20 = checkCurrency20();
@@ -1631,63 +1641,42 @@ function checkCashRegister(price, cash, cid) {
   const currencyCheckerC5 = checkCurrencyC5();
   const currencyCheckerC1 = checkCurrencyC1();
 
-  function cidHundredsCheck() {
-    if (compareArr.flat().includes("ONE HUNDRED")) return currencyChecker100;
-    else return;
-  }
-  function cidTwentiesCheck() {
-    if (compareArr.flat().includes("TWENTY")) return currencyChecker20;
-    else return;
-  }
-
-  function cidTensCheck() {
-    if (compareArr.flat().includes("TEN")) return currencyChecker10;
-    else return;
-  }
-
-  function cidFivesCheck() {
-    if (compareArr.flat().includes("FIVE")) return currencyChecker5;
-    else return;
+  // ! this is code that passes the obj test
+  // finalAnswer = {name: 'objectBro'};
+  // return finalAnswer;
+function bigCidChecker() {
+  if (compareArr.flat().includes("ONE HUNDRED")) return currencyChecker100;
+     else if (compareArr.flat().includes("TWENTY")) return currencyChecker20;
+    else if (compareArr.flat().includes("TEN")) return currencyChecker10;
+    else if (compareArr.flat().includes("FIVE")) return currencyChecker5;
+    else if (compareArr.flat().includes("ONE")) return currencyChecker1;
+    else if (compareArr.flat().includes("QUARTER")) return currencyCheckerC25;
+    else if (compareArr.flat().includes("DIME")) return currencyCheckerC10;
+    else if (compareArr.flat().includes("NICKEL")) return currencyCheckerC5;
+    else if (compareArr.flat().includes("PENNY")) return currencyCheckerC1;
   }
 
-  function cidOnesCheck() {
-    if (compareArr.flat().includes("ONE")) return currencyChecker1;
-    else return;
-  }
+ 
 
-  function cidQuartersCheck() {
-    if (compareArr.flat().includes("QUARTER")) return currencyCheckerC25;
-    else return;
-  }
+//  works here
+  // ! this is code that passes the obj test
+  // finalAnswer = { name: "objectBro" };
+  // return finalAnswer;
+const bigCidChecker = bigCidChecker();
+  // const cidHundreds = cidHundredsCheck();
+  // const cidTwenties = cidTwentiesCheck();
+  // const cidTens = cidTensCheck();
+  // const cidFives = cidFivesCheck();
+  // const cidOnes = cidOnesCheck();
+  // const cidQuarters = cidQuartersCheck();
+  // const cidDimes = cidDimesCheck();
+  // const cidNickels = cidNickelsCheck();
+  // const cidPennies = cidPenniesCheck();
 
-  function cidDimesCheck() {
-    if (compareArr.flat().includes("DIME")) return currencyCheckerC10;
-    else return;
-  }
-
-  function cidNickelsCheck() {
-    if (compareArr.flat().includes("NICKEL")) return currencyCheckerC5;
-    else return;
-  }
-  function cidPenniesCheck() {
-    if (compareArr.flat().includes("PENNY")) return currencyCheckerC1;
-    else return;
-  }
-  const cidHundreds = cidHundredsCheck();
-  const cidTwenties = cidTwentiesCheck();
-  const cidTens = cidTensCheck();
-  const cidFives = cidFivesCheck();
-  const cidOnes = cidOnesCheck();
-  const cidQuarters = cidQuartersCheck();
-  const cidDimes = cidDimesCheck();
-  const cidNickels = cidNickelsCheck();
-  const cidPennies = cidPenniesCheck();
-
-  // ! DOES works here!!!!!!!!!!!
-  //  this is code that passes the obj test
-  //* finalAnswer = { name: "objectBro" };
-  //* return finalAnswer;
-  // ! ///////////////////////////////
+ // works here!!!!!!!!!!!!!!!!!
+  // ! this is code that passes the obj test
+  // finalAnswer = { name: "objectBro" };
+  // return finalAnswer;
 
   const cidCheck100 = hundredsChecker();
   const cidCheck20 = twentiesChecker();
@@ -1698,13 +1687,15 @@ function checkCashRegister(price, cash, cid) {
   const cidCheckC10 = dimesChecker();
   const cidCheckC5 = nickelsChecker();
   const cidCheckC1 = penniesChecker();
-
-  // ! does NOT works here!!!!!!!!!!!
-  //  this is code that passes the obj test
-  //* finalAnswer = { name: "objectBro" };
-  //* return finalAnswer;
-  // ! ///////////////////////////////
+ // does NOT works here!!!!!!!!!!!
+  // ! this is code that passes the obj test
+  // finalAnswer = { name: "objectBro" };
+  // return finalAnswer;
   debugger;
+  // does NOT work here
+  // ! this is code that passes the obj test
+  // finalAnswer = {name: 'objectBro'};
+  // return finalAnswer;
   // statusArrBuilder, will use later to create change response in open status
   const statusArrBuilder = () => {
     if (hundredsUsed > 0) {
@@ -1755,6 +1746,10 @@ function checkCashRegister(price, cash, cid) {
     console.log(statusArr);
     return statusArr;
   };
+// does not work here
+// ! this is code that passes the obj test
+  // finalAnswer = {name: 'objectBro'};
+  // return finalAnswer;
 
   // create class and constructor functions for later
   class Status {
@@ -1814,6 +1809,7 @@ checkCashRegister(3.26, 100, [
   ["ONE HUNDRED", 100],
 ]);
 
+// //////////////////////////// //////////////////////////// //////////////////////////// //////////////////////////
 // ? I dont understand why the FCC wont even acknowledge finalAnswer as the correct answer,
 // ? let alone why it is not even considered an obj at all! 
 // ? especially bc the chrome dev tools console returns the obj, but the FCC wont????
