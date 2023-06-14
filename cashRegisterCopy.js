@@ -32,9 +32,6 @@ function checkCashRegister(price, cash, cid) {
     ["ONE HUNDRED", 100],
   ];
   const reversedCID = cid.reverse();
-  // ! this is code that passes the obj test
-  //* finalAnswer = {name: 'objectBro'};
-  //* return finalAnswer;
 
   // find change to be given
   let change = cash - price;
@@ -66,191 +63,7 @@ function checkCashRegister(price, cash, cid) {
   // sort array from biggest to smallest values
   coinValueArr = coinValueArr.sort((a, b) => b - a);
 
-  //* series of functions that will determine the most ideal change to be distrubuted
-  function hundredCount() {
-    let skipper = false;
-    let count = 0;
-    while (roundedChange >= 100) {
-      roundedChange = roundedChange - coinValueArr[0];
-      roundedChange = Math.round(100 * roundedChange) / 100;
-      count++;
-      skipper = true;
-    }
-    if (skipper) {
-      coinValueArr.shift();
-    } else if (roundedChange < 100) {
-      return count;
-    }
 
-    console.log(count + " 100");
-    return count;
-  }
-  function twentyCount() {
-    let skipper = false;
-
-    let count = 0;
-    while (roundedChange >= 20) {
-      roundedChange = roundedChange - coinValueArr[0];
-      roundedChange = Math.round(100 * roundedChange) / 100;
-
-      count++;
-      skipper = true;
-    }
-    if (skipper) {
-      coinValueArr.shift();
-    } else if (roundedChange < 20) {
-      coinValueArr.shift();
-      return count;
-    }
-
-    console.log(count + " 20");
-    return count;
-  }
-  function tenCount() {
-    let skipper = false;
-
-    let count = 0;
-    while (roundedChange >= 10) {
-      roundedChange = roundedChange - coinValueArr[0];
-      roundedChange = Math.round(100 * roundedChange) / 100;
-
-      count++;
-      skipper = true;
-    }
-    if (skipper) {
-      coinValueArr.shift();
-    } else if (roundedChange < 10) {
-      coinValueArr.shift();
-      return count;
-    }
-
-    console.log(count + " 10");
-    return count;
-  }
-  function fiveCount() {
-    let skipper = false;
-
-    let count = 0;
-    while (roundedChange >= 5) {
-      roundedChange = roundedChange - coinValueArr[0];
-      roundedChange = Math.round(100 * roundedChange) / 100;
-
-      count++;
-      skipper = true;
-    }
-    if (skipper) {
-      coinValueArr.shift();
-    } else if (roundedChange < 5) {
-      coinValueArr.shift();
-      return count;
-    }
-
-    console.log(count + " 5");
-    return count;
-  }
-  function onesCount() {
-    let skipper = false;
-
-    let count = 0;
-    while (roundedChange >= 1) {
-      roundedChange = roundedChange - coinValueArr[0];
-      roundedChange = Math.round(100 * roundedChange) / 100;
-
-      count++;
-      skipper = true;
-    }
-    if (skipper) {
-      coinValueArr.shift();
-    } else if (roundedChange < 1) {
-      coinValueArr.shift();
-      return count;
-    }
-
-    console.log(count + " 1");
-    return count;
-  }
-  function quarterCount() {
-    let skipper = false;
-
-    let count = 0;
-    while (roundedChange >= 0.25) {
-      roundedChange = roundedChange - coinValueArr[0];
-      roundedChange = Math.round(100 * roundedChange) / 100;
-
-      count++;
-      skipper = true;
-    }
-    if (skipper) {
-      coinValueArr.shift();
-    } else if (roundedChange < 0.25) {
-      coinValueArr.shift();
-      return count;
-    }
-    // console.log(coinValueArr);
-    console.log(count + " .25");
-    return count;
-  }
-  function dimeCount() {
-    let skipper = false;
-
-    let count = 0;
-    while (roundedChange >= 0.1) {
-      roundedChange = roundedChange - coinValueArr[0];
-      roundedChange = Math.round(100 * roundedChange) / 100;
-
-      count++;
-      skipper = true;
-    }
-    if (skipper) {
-      coinValueArr.shift();
-    } else if (roundedChange < 0.1) {
-      coinValueArr.shift();
-      return count;
-    }
-    // console.log(coinValueArr);
-    console.log(count + " .10");
-    return count;
-  }
-  function nickelCount() {
-    let skipper = false;
-
-    let count = 0;
-    while (roundedChange >= 0.05) {
-      roundedChange = roundedChange - coinValueArr[0];
-      roundedChange = Math.round(100 * roundedChange) / 100;
-      count++;
-      skipper = true;
-    }
-    if (skipper) {
-      coinValueArr.shift();
-    } else if (roundedChange < 0.05) {
-      coinValueArr.shift();
-      return count;
-    }
-    // console.log(coinValueArr);
-    console.log(count + " .05");
-    return count;
-  }
-  function pennyCount() {
-    let skipper = false;
-
-    let count = 0;
-    while (roundedChange >= 0.01) {
-      roundedChange = roundedChange - coinValueArr[0];
-      roundedChange = Math.round(100 * roundedChange) / 100;
-      count++;
-      skipper = true;
-    }
-    if (skipper) {
-      coinValueArr.shift();
-    } else if (roundedChange < 0.01) {
-      coinValueArr.shift();
-      return count;
-    }
-    // console.log(coinValueArr);
-    console.log(count + " .01");
-    return count;
-  }
 
   //* declaring said functions in vars to get most ideal change to be given: this returns the count of currency type needed(IDEALLY)
   console.log("ideal change to be given");
@@ -1755,14 +1568,6 @@ function checkCashRegister(price, cash, cid) {
     console.log(statusArr);
     return statusArr;
   };
-
-  // create class and constructor functions for later
-  class Status {
-    constructor(status, change) {
-      this.status = status;
-      this.change = change;
-    }
-  }
 
   // setting conditions for register status
   // if the code is left with more than a penny, then we will not get exact change and it will be insufficient funds
