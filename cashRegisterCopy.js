@@ -1444,48 +1444,20 @@ function checkCashRegister(price, cash, cid) {
   const currencyCheckerC5 = checkCurrencyC5();
   const currencyCheckerC1 = checkCurrencyC1();
 
-  function cidHundredsCheck() {
+// checks if the filtered array contains the key word to determine which function we should run
+// to get the change we need
+  function bigCidChecker() {
     if (compareArr.flat().includes("ONE HUNDRED")) return currencyChecker100;
-    else return;
-  }
-  function cidTwentiesCheck() {
-    if (compareArr.flat().includes("TWENTY")) return currencyChecker20;
-    else return;
-  }
-
-  function cidTensCheck() {
-    if (compareArr.flat().includes("TEN")) return currencyChecker10;
-    else return;
+    else if (compareArr.flat().includes("TWENTY")) return currencyChecker20;
+    else if (compareArr.flat().includes("TEN")) return currencyChecker10;
+    else if (compareArr.flat().includes("FIVE")) return currencyChecker5;
+    else if (compareArr.flat().includes("ONE")) return currencyChecker1;
+    else if (compareArr.flat().includes("QUARTER")) return currencyCheckerC25;
+    else if (compareArr.flat().includes("DIME")) return currencyCheckerC10;
+    else if (compareArr.flat().includes("NICKEL")) return currencyCheckerC5;
+    else if (compareArr.flat().includes("PENNY")) return currencyCheckerC1;
   }
 
-  function cidFivesCheck() {
-    if (compareArr.flat().includes("FIVE")) return currencyChecker5;
-    else return;
-  }
-
-  function cidOnesCheck() {
-    if (compareArr.flat().includes("ONE")) return currencyChecker1;
-    else return;
-  }
-
-  function cidQuartersCheck() {
-    if (compareArr.flat().includes("QUARTER")) return currencyCheckerC25;
-    else return;
-  }
-
-  function cidDimesCheck() {
-    if (compareArr.flat().includes("DIME")) return currencyCheckerC10;
-    else return;
-  }
-
-  function cidNickelsCheck() {
-    if (compareArr.flat().includes("NICKEL")) return currencyCheckerC5;
-    else return;
-  }
-  function cidPenniesCheck() {
-    if (compareArr.flat().includes("PENNY")) return currencyCheckerC1;
-    else return;
-  }
   const cidHundreds = cidHundredsCheck();
   const cidTwenties = cidTwentiesCheck();
   const cidTens = cidTensCheck();
