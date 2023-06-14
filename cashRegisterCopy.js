@@ -63,19 +63,6 @@ function checkCashRegister(price, cash, cid) {
   // sort array from biggest to smallest values
   coinValueArr = coinValueArr.sort((a, b) => b - a);
 
-
-
-  //* declaring said functions in vars to get most ideal change to be given: this returns the count of currency type needed(IDEALLY)
-  console.log("ideal change to be given");
-  const numOfHundreds = hundredCount();
-  const numOfTwenties = twentyCount();
-  const numOfTens = tenCount();
-  const numOfFives = fiveCount();
-  const numOfOnes = onesCount();
-  const numOfQuarters = quarterCount();
-  const numOfDimes = dimeCount();
-  const numOfNickels = nickelCount();
-  const numOfPennies = pennyCount();
   // checking the rounded change left to be sure funds are sufficient
   // if the currency type is in there, then we will take money out of that section until we no longer can while( currency >= baseAmount)
   //
