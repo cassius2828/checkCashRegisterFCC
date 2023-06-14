@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cassius2828/checkCashRegisterFCC/issues"
   },
-  "homepage": "https://github.com/cassius2828/checkCashRegisterFCC/tree/main#readme"
+  "homepage": "https://github.com/cassius2828/checkCashRegisterFCC/tree/main#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
