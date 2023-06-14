@@ -1,0 +1,19 @@
+{
+  "name": "checkcashregisterfcc",
+  "version": "1.0.0",
+  "description": "freecodecamp final JS certification project",
+  "main": "cashRegisterCopy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cassius2828/checkCashRegisterFCC.git#main"
+  },
+  "author": "Cassius Reynolds",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cassius2828/checkCashRegisterFCC/issues"
+  },
+  "homepage": "https://github.com/cassius2828/checkCashRegisterFCC/tree/main#readme"
+}
