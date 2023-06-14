@@ -1,3 +1,5 @@
+// yea this version is chalked lol 
+
 //! COPY NUM 3
 // 6/12/23 4:15PM
 function checkCashRegister(price, cash, cid) {
@@ -1444,16 +1446,6 @@ function checkCashRegister(price, cash, cid) {
     else if (compareArr.flat().includes("NICKEL")) return currencyCheckerC5;
     else if (compareArr.flat().includes("PENNY")) return currencyCheckerC1;
   }
-
-  const cidHundreds = cidHundredsCheck();
-  const cidTwenties = cidTwentiesCheck();
-  const cidTens = cidTensCheck();
-  const cidFives = cidFivesCheck();
-  const cidOnes = cidOnesCheck();
-  const cidQuarters = cidQuartersCheck();
-  const cidDimes = cidDimesCheck();
-  const cidNickels = cidNickelsCheck();
-  const cidPennies = cidPenniesCheck();
 
   // ! DOES works here!!!!!!!!!!!
   //  this is code that passes the obj test
